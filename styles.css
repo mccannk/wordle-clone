@@ -13,6 +13,17 @@ body {
   font-size: clamp(.5rem, 2.5vmin, 1.5rem);
 }
 
+.mccannk {
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+.bullets {
+  display: list-item;
+  color: whitesmoke;
+}
+
 .keyboard {
   display: grid;
   grid-template-columns: repeat(20, minmax(auto, 1.25em));
@@ -57,6 +68,9 @@ body {
 
 .key.wrong {
   --lightness: 23%;
+  color:hsl(240, 3%, 7%);
+  cursor: default;
+  background-color: hsl(240, 3%, 7%);
 }
 
 .key.wrong-location {
@@ -80,6 +94,7 @@ body {
   grid-template-rows: repeat(6, 4em);
   gap: .25em;
   margin-bottom: 1em;
+  padding-top: 10px;
 }
 
 .tile {
@@ -119,11 +134,11 @@ body {
 }
 
 .tile.dance {
-  animation: dance 500ms ease-in-out;
+  animation: dance 1500ms ease-in-out;
 }
 
 .tile.flip {
-  transform: rotateX(90deg);
+  transform: rotateY(90deg);
 }
 
 @keyframes shake {
